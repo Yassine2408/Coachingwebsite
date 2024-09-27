@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CoachPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CoachPro</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="hero-contact">
+            <h1>Get in Touch</h1>
+            <p>We're here to answer your questions and help you start your journey</p>
+        </section>
+
+        <section id="contact-info">
+            <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>info@coachpro.com</p>
+            </div>
+            <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>123 Coaching Street, City, State 12345</p>
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="coaching-inquiry">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested Service</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="executive">Executive Coaching</option>
+                        <option value="career">Career Coaching</option>
+                        <option value="life">Life Coaching</option>
+                        <option value="business">Business Coaching</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is coaching?</h3>
+                <p>Coaching is a collaborative process that helps individuals or teams identify and achieve their personal or professional goals.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does a typical coaching engagement last?</h3>
+                <p>The duration varies based on individual needs, but typically ranges from 3 to 6 months with sessions every 2-4 weeks.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is coaching confidential?</h3>
+                <p>Yes, all coaching sessions and communications are kept strictly confidential.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content (same as before) -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

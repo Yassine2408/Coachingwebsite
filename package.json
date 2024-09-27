@@ -1,0 +1,19 @@
+{
+  "name": "coachpro",
+  "version": "1.0.0",
+  "description": "Coaching website with scheduling",
+  "main": "functions/api.js",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "mongodb": "^4.1.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^6.14.25"
+  }
+}
