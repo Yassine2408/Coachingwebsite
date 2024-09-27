@@ -67,11 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // New code block to handle form submission for coaching inquiry
     document.getElementById('coaching-inquiry').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
+        const form = e.target;
+        const formData = new FormData(form);
         const appointmentData = Object.fromEntries(formData);
 
         try {
-            const response = await fetch('http://localhost:5000/api/appointments', {
+            const response = await fetch('/.netlify/functions/api', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (response.ok) {
                 alert('Appointment scheduled successfully!');
-                e.target.reset();
+                form.reset();  // This should work now
             } else {
                 alert('Failed to schedule appointment. Please try again.');
             }
