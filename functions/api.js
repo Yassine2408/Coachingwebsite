@@ -15,13 +15,9 @@ async function connectToDatabase() {
   return db;
 }
 
-exports.handler = async (event, context) => {
-  context.callbackWaitsForEmptyEventLoop = false;
-  try {
-    const db = await connectToDatabase();
-    // Your database operations here
-    return { statusCode: 200, body: JSON.stringify({ message: 'Connected to database successfully' }) };
-  } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to connect to database' }) };
-  }
-};
+exports.handler = async function(event, context) {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({message: "Function is working"})
+  };
+}

@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const formData = new FormData(this);
+            const formData = new FormData(form);
             const appointmentData = Object.fromEntries(formData);
 
             try {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (response.ok) {
                     alert('Appointment scheduled successfully!');
-                    this.reset();  // This should work now
+                    form.reset();  // Use the form variable directly
                 } else {
                     alert('Failed to schedule appointment. Please try again.');
                 }
