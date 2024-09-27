@@ -1,3 +1,11 @@
+import { SquidClient } from '@squidcloud/client';
+
+const squid = new SquidClient({
+    appId: '0awfi4i2awmyqqu59y',
+    region: 'us-east-1.aws',
+    environmentId: 'dev',
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -80,20 +88,10 @@ async function handleSubmit(event) {
     const appointmentData = Object.fromEntries(formData);
 
     try {
-        const response = await fetch('/.netlify/functions/api', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(appointmentData),
-        });
-
-        if (response.ok) {
-            alert('Appointment scheduled successfully!');
-            form.reset();
-        } else {
-            alert('Failed to schedule appointment. Please try again.');
-        }
+        // Assuming you have a 'appointments' collection in Squid
+        await squid.collection('appointments').add(appointmentData);
+        alert('Appointment scheduled successfully!');
+        form.reset();
     } catch (error) {
         console.error('Error:', error);
         alert('An error occurred. Please try again later.');
