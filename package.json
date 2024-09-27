@@ -4,7 +4,8 @@
   "description": "Coaching website with scheduling",
   "main": "functions/api.js",
   "scripts": {
-    "start": "netlify dev"
+    "start": "netlify dev",
+    "build": "mkdir -p functions && echo 'Build completed'"
   },
   "keywords": [],
   "author": "",
